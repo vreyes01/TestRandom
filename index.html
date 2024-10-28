@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neón</title>
+  <title>PICO PAL K LEE</title>
   <style>
     /* Configuración general */
     body, html {
@@ -17,33 +17,55 @@
       overflow: hidden;
     }
 
+    /* Contenedor para el corte de neón */
+    .neon-container {
+      overflow: hidden;
+      padding: 10px 20px;
+      border: 2px solid transparent;
+      box-shadow: 0 0 20px rgba(0, 0, 255, 0.6), 0 0 50px rgba(0, 0, 255, 0.4);
+      animation: containerGlow 1.5s ease-in-out infinite alternate;
+    }
+
     /* Estilo del texto */
     h1 {
       font-family: Arial, sans-serif;
       font-size: 4rem;
       color: #0ff;
-      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff, 
-                   0 0 40px #00f, 0 0 70px #00f, 0 0 80px #00f, 
+      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff,
+                   0 0 40px #00f, 0 0 70px #00f, 0 0 80px #00f,
                    0 0 100px #00f, 0 0 150px #00f;
       animation: neon 1.5s ease-in-out infinite alternate;
+      margin: 0;
     }
 
-    /* Animación de neón */
+    /* Animación de neón del texto */
     @keyframes neon {
       from {
-        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff, 
-                     0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f, 
+        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff,
+                     0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f,
                      0 0 50px #00f, 0 0 75px #00f;
       }
       to {
-        text-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff, 
-                     0 0 50px #00f, 0 0 60px #00f, 0 0 70px #00f, 
+        text-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff,
+                     0 0 50px #00f, 0 0 60px #00f, 0 0 70px #00f,
                      0 0 80px #00f, 0 0 100px #00f;
+      }
+    }
+
+    /* Animación del contenedor de corte */
+    @keyframes containerGlow {
+      from {
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.4), 0 0 20px rgba(0, 0, 255, 0.3);
+      }
+      to {
+        box-shadow: 0 0 20px rgba(0, 0, 255, 0.6), 0 0 50px rgba(0, 0, 255, 0.4);
       }
     }
   </style>
 </head>
 <body>
-  <h1>Texto Neón Pulsante</h1>
+  <div class="neon-container">
+    <h1>Texto Neón Pulsante</h1>
+  </div>
 </body>
 </html>
